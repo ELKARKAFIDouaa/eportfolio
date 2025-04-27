@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Douaa's E-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <div id="header">
+        <div class="bubbles">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="container">
+            <nav>
+                <img src="images/logo6-removebg-preview.png" class="logo">
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#projets">Projets professionnelles</a></li>
+                    <li><a href="#competences">compétences</a></li>
+                    <li><a href="#activites">Activités parascolaires</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        
+        
+            
+         <div class="header-text">
+            <p>Etudiante ingénieure en génie logiciel</p>
+            <h1>Bonjour, Je suis <span>EL KARKAFI <br> Douaa !</h1> </span>
+         </div>
+        </div>
+     </div>
+<!-- ------------- à propos ------------- -->
+     <div id="apropos">
+        <div class="container">
+            <div class="row">
+                <div class="apropos-col-1">
+                     <img src="images/dou2.jpg" >
+                </div>
+                <div class="apropos-col-2">
+                    <h1 class="sub-title"> À propos de moi </h1>
+                    <p>Etudiante en 2ᵉ année à ENSIAS, passionnée par l’ingénierie informatique ,
+                         j'ai développé en groupe plusieurs projets en génie logiciel. Curieuse,
+                          motivée et avide de nouveaux défis, je cherche à mettre mes compétences au service
+                           d’un environnement innovant.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Éducation</p>
+                            <p class="tab-links" onclick="opentab('experience')">Expérience</p>
+                            <p class="tab-links" onclick="opentab('projets')">Projets </p>
+                            <p class="tab-links" onclick="opentab('vision')">Vision</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>École Nationale Supérieure d'Informatique et d'Analyse des Systèmes(ENSIAS)</span><br>Cycle d’ingénierie en data science et IoT(IDSIT)   :  2023-2026</li>
+                                <li><span>Classes Préparatoires au Grands Ecoles(CPGE)</span><br>Physique et science d’ingénieure(PSI*)  :  2021 - 2023</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Stage : Développeur Full Stack chez CIFpro-Groupe Africancy</span><br>Création d'un site web pour une école de business <br> 06/2024-07/2024</li>  
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="projets">
+                            <ul>
+                                <li><span>Protection des données des adolescents sur les plateformes sociales</span><br>NoSQL, l’analyse graphique, et la data science en service de la cybersécurité</li>
+                                <li><span>Développement d'une application mobile pour la détection des gaz</span><br>Labrinth – Système de détection de gaz et de fumée dans une usine de pétrochimie, lié à une application mobile .</li>
+                                <li><span>Développement d’une application web de réservation d’hôtels</span><br>LACASA – Système de gestion de réservation d’hôtels et d’administration des clients</li>
+                                <li><span>Développement d’un jeu gamifié pour les enfants dyslexiques âgés de 6 à 12 ans</span><br>World Explorer – Un jeu qui plonge les joueurs dans un monde composé de quatre îles thématiques, chacune ciblant une compétence linguistique spécifique </li>
+                                <li><span>Développement d'une application web pour la gestion des livraisons</span><br>Quickliv – Système permettant la gestion des commandes de livraison, le suivi en temps réel des livraisons et la gestion des livreurs </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="vision">
+                            <ul>
+                                <li>Mon ambition est de devenir une ingénieure experte en développement logiciel.
+                                     Et mon objectif est de contribuer à des projets technologiques d'envergure internationale, 
+                                    tout en continuant à apprendre et évoluer dans un environnement innovant et collaboratif.</li>  
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+<!-- --------- Projets Professionnels Section ---------- -->
+<div id="projets">
+    <div class="container">
+      <h1 class="sub-title">Projets Professionnels</h1>
+  
+      <div class="projects-wrapper"> 
+        <div class="arrow-left" onclick="scrollPrev()">&#10094;</div> 
+  
+        <div class="projects-scroll">
+          
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/reseau.png" alt="Protection des données" class="project-image">
+              <div class="project-details">
+                <h3>Protection des données des adolescents</h3>
+                <p class="project-info">ENSIAS | 03/2025 - 04/2025</p>
+                <ul>
+                  <li>Approche NoSQL et analyse graphique pour la cybersécurité.</li>
+                  <li>État de l’art sur la sécurité des adolescents.</li>
+                  <li>Moteur de détection basé sur Neo4j.</li>
+                  <li>Implémentation d'algorithmes de détection d’anomalies.</li>
+                  <li>Évaluation : précision, rappel, scalabilité.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/labrinth.png" alt="Détection gaz" class="project-image">
+              <div class="project-details">
+                <h3>Application mobile de détection des gaz</h3>
+                <p class="project-info">ENSIAS | 02/2025 - 05/2025</p>
+                <ul>
+                  <li>Système de détection gaz/fumée avec capteurs IoT.</li>
+                  <li>Application mobile pour alertes en temps réel.</li>
+                  <li>Communication sécurisée entre capteurs et app mobile.</li>
+                  <li>Optimisation de la transmission d’alertes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/lacasa (2).png" alt="Réservation hôtels" class="project-image">
+              <div class="project-details">
+                <h3>Application web de réservation d’hôtels</h3>
+                <p class="project-info">ENSIAS | 10/2024 - 12/2024</p>
+                <ul>
+                  <li>Architecture de gestion d’hôtels et réservations.</li>
+                  <li>Interface utilisateur intuitive et responsive.</li>
+                  <li>Fonctionnalités : recherche, disponibilités, paiements sécurisés.</li>
+                  <li>Outils : UML, JAVA EE, PHPMyAdmin, HTML, Tailwind, JS.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/quick.png" alt="Livraison" class="project-image">
+              <div class="project-details">
+                <h3>Application web de gestion des livraisons</h3>
+                <p class="project-info">ENSIAS | 02/2024 - 05/2024</p>
+                <ul>
+                  <li>Gestion des commandes, livraisons et clients.</li>
+                  <li>Suivi temps réel, notifications, planification d’itinéraires.</li>
+                  <li>Outils : MERISE, LARAVEL, HTML, CSS, JS.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/ile.jpg" alt="World Explorer" class="project-image">
+              <div class="project-details">
+                <h3>World Explorer – Jeu éducatif gamifié</h3>
+                <p class="project-info">Projet personnel | 2025</p>
+                <ul>
+                  <li>Jeu conçu pour aider les enfants dyslexiques à améliorer leurs compétences linguistiques.</li>
+                  <li>Chaque île représente une compétence : lecture, écriture, vocabulaire, compréhension orale.</li>
+                  <li>Mini-jeux interactifs adaptés aux besoins des enfants dyslexiques.</li>
+                  <li>Ambiance ludique avec défis, récompenses et progression personnalisée.</li>
+                  <li>Développement sous Unity avec une approche UX inclusive.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="project-card">
+            <div class="project-content">
+              <img src="images/ifbs.png" alt="Stage CIFpro" class="project-image">
+              <div class="project-details">
+                <h3>CIFpro-Groupe Africancy Casablanca - Stage</h3>
+                <p class="project-info">06/2024 - 07/2024</p>
+                <ul>
+                  <li>Conception et création d’un site web pour une école de business.</li>
+                  <li>Respect de la charte graphique, développement des fonctionnalités de préinscription.</li>
+                  <li>Outils : UML, PHP, HTML, CSS, JavaScript.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="arrow-right" onclick="scrollNext()">&#10095;</div>
+      </div>
+  
+    </div>
+  </div>
+  
+  <script>
+  function scrollNext() {
+    const container = document.querySelector('.projects-scroll');
+    const width = container.offsetWidth;
+    container.scrollBy({ left: width, behavior: 'smooth' });
+  }
+  
+  function scrollPrev() {
+    const container = document.querySelector('.projects-scroll');
+    const width = container.offsetWidth;
+    container.scrollBy({ left: -width, behavior: 'smooth' });
+  }
+  </script>
+  
+    <!-- ------------- Compétences ------------- -->
+    <div id="competences">
+        <div class="container">
+          <h1 class="sub-title">Compétences</h1>
+          <div class="competences-list">
+            <div onclick="openModal('bdd')">
+              <i class="fa-solid fa-database"></i>
+              <h2>Bases de données</h2>
+              <a href="javascript:void(0)">Savoir plus</a>
+            </div>
+            <div onclick="openModal('languages')">
+              <i class="fa-solid fa-code"></i>
+              <h2>Langages de programmation</h2>
+              <a href="javascript:void(0)">Savoir plus</a>
+            </div>
+            <div onclick="openModal('frameworks')">
+              <i class="fa-brands fa-phoenix-framework"></i>
+              <h2>Frameworks & Tech</h2>
+              <a href="javascript:void(0)">Savoir plus</a>
+            </div>
+            <div onclick="openModal('softskills')">
+              <i class="fa-solid fa-person-dress"></i>
+              <h2>Compétences interpersonnelles</h2>
+              <a href="javascript:void(0)">Savoir plus</a>
+            </div>
+            <div onclick="openModal('langues')">
+              <i class="fa-solid fa-language"></i>
+              <h2>Langues</h2>
+              <a href="javascript:void(0)">Savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal général (invisible au début) -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div id="modal-body">
+            <!-- Le contenu (liste) apparaîtra ici -->
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // Les données à afficher
+        const competencesDetails = {
+          bdd: [
+            "Firebase",
+            "MongoDB",
+            "Neo4j",
+            "MySQL",
+            "phpMyAdmin",
+            "Oracle Database 21c",
+            "SQL Developer"
+          ],
+          languages: [
+            "Java",
+            "Python",
+            "C",
+            "PHP",
+            "JavaScript",
+            "HTML/CSS"
+          ],
+          frameworks: [
+            "Laravel",
+            "Java EE",
+            "Tailwind CSS",
+            "Ajax",
+            "Android Studio",
+            "Conception Merise et UML",
+            "Méthodologies agiles (SCRUM)"
+          ],
+          softskills: [
+            "Esprit d'équipe",
+            "Résolution de problèmes",
+            "Autonomie",
+            "Curiosité",
+            "Adaptabilité"
+          ],
+          langues: [
+            "Français Niveau B1",
+            "Anglais Niveau A2"
+          ]
+        };
+      
+        function openModal(type) {
+          const modal = document.getElementById("modal");
+          const modalBody = document.getElementById("modal-body");
+      
+          let list = "<ul>";
+          competencesDetails[type].forEach(item => {
+            list += `<li>${item}</li>`;
+          });
+          list += "</ul>";
+      
+          modalBody.innerHTML = list;
+          modal.style.display = "block";
+        }
+      
+        function closeModal() {
+          document.getElementById("modal").style.display = "none";
+        }
+      </script>
+      
+      
+
+<!-- ------------- Activités parascolaires ------------- -->
+<div id="activites">
+    <div class="container">
+      <h1 class="sub-title">Activités parascolaires</h1>
+      <div class="activities-grid">
+        <div class="activity-card">
+          <div class="activity-icon">🎙️</div>
+          <h3>Club Bridge (ENSIAS)</h3>
+          <p>Membre de la cellule “KIDRTI LIHA”, chargée de contacter les anciens lauréats pour des podcasts et événements.</p>
+        </div>
+        <div class="activity-card">
+          <div class="activity-icon">🌍</div>
+          <h3>Club YANANGA (JADARA)</h3>
+          <p>Sensibilisation des jeunes à leurs responsabilités sociétales et organisation d’événements pour l’égalité des chances.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- --------- Contact Section ---------- -->
+<div id="contact">
+    <div class="container">
+      <h1 class="sub-title">Contactez-moi</h1>
+  
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Discutons ensemble</h2>
+          <p>N'hésitez pas à me contacter pour toute collaboration, projet ou question. 📬</p>
+  
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:votre.email@example.com">elkarkafi.douaa@gmail.com</a>
+          </div>
+  
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+212600000000">+212 6 84 74 80 76</a>
+          </div>
+  
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>FES, Maroc</span>
+          </div>
+  
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/douaa-el-karkafi-316472266/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ELKARKAFIDouaa" target="_blank"><i class="fab fa-github"></i></a>
+            
+        </div>
+        <div class="cv-button">
+            <a href="images/ElKarkafiDouaaCV.pdf" class="btn btn2" target="_blank">Télécharger CV</a>
+        </div>
+        </div>
+        
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xwpopybv" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
+            
+
+            <button type="submit" class="btn">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+   <script>// Menu mobile
+    // Menu mobile
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navLinks.classList.toggle('show');
+});
+
+// Fermer le menu lorsqu'un lien est cliqué
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('show');
+        }
+    });
+});</script>
+    
+    <footer>
+        <p>© EL KARKAFI Douaa - 2025</p>
+    </footer>
+</body>
+</html>
